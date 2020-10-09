@@ -1,0 +1,32 @@
+{
+  "name": "eslint-action",
+  "version": "1.0.0",
+  "description": "ESLint Action Test",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore ./src --ext ts --ext tsx --ext js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yusinto/github-actions-demo.git"
+  },
+  "author": "Yusinto Ngadiman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yusinto/github-actions-demo/issues"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.10.0",
+    "@typescript-eslint/parser": "^2.10.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
