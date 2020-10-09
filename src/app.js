@@ -6,4 +6,5 @@ twerld = jello;
 
 function blahblah(){
     alert(funky);
+    test;
 } 
