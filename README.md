@@ -26,7 +26,7 @@ When an action triggers the workflow, the processes defined in the `.yml` config
 3. Run linting task from our `package.json`
 
 ```
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   lint:
