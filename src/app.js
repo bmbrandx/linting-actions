@@ -1,10 +1,9 @@
-const hello;
+let hello;
 const world;
 
-hello = w0rld;
-twerld = jello;
+world = hello;
 
-function blahblah(){
-    alert(funky);
-    test;
-} 
+function NotAGoodOne(var){
+
+    return world;
+}
