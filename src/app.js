@@ -5,5 +5,7 @@ world = hello;
 
 function NotAGoodOne(var){
 
+    dogs = cats;
+    
     return world;
 }
