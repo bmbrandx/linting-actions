@@ -56,5 +56,8 @@ jobs:
 ```
 
 ## Merge Blocking
-
 Implementing merge blocking is done through 'Branch Protection' within the repository. This can be configured per branch, and can have specific Actions applied to what you want to be merge blocking. 
+
+## Additional POC Options
+
+Integrate the Github SuperLinter to do codebase linting https://github.com/github/super-linter#supported-linters
