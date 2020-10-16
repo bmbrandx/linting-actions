@@ -4,7 +4,8 @@
   "description": "ESLint Action Test",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --ignore-path .gitignore ./src --ext ts --ext tsx --ext js"
+    "lint": "eslint --ignore-path .gitignore ./src --ext ts --ext tsx --ext js",
+    "sasslint": "sass-lint -c .sass-lint.yml '**/*.sass' -v -q"
   },
   "repository": {
     "type": "git",
