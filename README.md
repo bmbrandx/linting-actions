@@ -1,20 +1,32 @@
-# Github Actions POC
+# Project overview
+
+The Mural Design System is a collaborative environment for reusable UI assets and guidelines for Mural applications.
+
+## Github Actions POC
 Implementation using Github workflows and ESLint for code quality related merge blocking in the design system.
 
-## Workflow 
+### Workflow 
 Github workflows are created using `.yml` configuration files. These configuration files live within the `.github/workflows` directory. 
 
-### Setting up Actions
+#### Setting up Actions
 To conduct linting actions within the Github workflow you need configurations in two locations. 
 
-### ESLint Configuration
+You need to configure your linters using the standard configuration files recommended for your linting library (example: `.eslintrc` for ESLint)
+
+You also need a workflow configuration file that is specific to setting up your Github Action.
+
+#### Linting Configurations 
+##### ESLint Configuration
 ESLint is configured as a normal package, per the requirements of the project. This includes:
 
 - dependant `npm` packages (installed as dev dependancies)
 - `npm` task to run linting within a CLI environment
 - .eslintrc.js configuration for linting rules and plugins
 
-### Actions Configuration
+##### SASS Lint Configuration
+SASS Lint is configured using the `sass-lint.yml` configuration. 
+
+#### Actions Configuration
 The configuration for the Actions workflow is found in the `main.yml` file within the `.github/workflows` directory. 
 
 Actions are run in standalone containers and can be conducted during any point of the Github workflow (example: on push, pull, pull request, etc). The current test workflow is set up to run on `push` and `pull_request`. 
@@ -25,6 +37,7 @@ When an action triggers the workflow, the processes defined in the `.yml` config
 2. Install node dependancies (if there is no cache)
 3. Run linting task from our `package.json`
 
+##### Example configuration for a workflow
 ```
 on: [pull_request]
 
@@ -55,11 +68,9 @@ jobs:
       run: npm run lint
 ```
 
-## Merge Blocking
-
+### Merge Blocking
 Implementing merge blocking is done through 'Branch Protection' within the repository. This can be configured per branch, and can have specific Actions applied to what you want to be merge blocking. 
 
-## Additional POC Options
+### Additional POC Options
 
 Integrate the Github SuperLinter to do codebase linting https://github.com/github/super-linter#supported-linters
-
